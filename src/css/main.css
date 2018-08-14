@@ -38,6 +38,8 @@ body {
   z-index: 2; }
   .header .logo img {
     width: 100%; }
+  .header .m-menu-link {
+    display: none; }
   .header .menu {
     width: 40%; }
     .header .menu ul {
@@ -188,13 +190,13 @@ body {
     padding: 2rem;
     text-align: center;
     align-items: center;
-    width: 35rem;
+    width: 33rem;
     border-radius: 25px;
     background-color: #ffffff;
     border: solid 1px #d7dbe8;
     transition: .5s; }
     .price-tags .price-tag:hover {
-      box-shadow: 0 0 68.5px 8.5px rgba(204, 204, 223, 0.71); }
+      box-shadow: 0 0 68.5px 19.5px rgba(204, 204, 223, 0.71); }
     .price-tags .price-tag img {
       width: 13rem;
       margin-top: 1.3rem; }
