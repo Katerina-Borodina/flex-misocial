@@ -1,0 +1,25 @@
+@media (max-width: 1199px) {
+  html {
+    font-size: 9px; }
+  .header .logo img {
+    width: 85%; }
+  .header .menu ul .get-started-btn {
+    padding: 15px 35px; }
+  .main-arrow .arrow-down {
+    width: 58px;
+    height: 58px;
+    line-height: 4.7; }
+  .price-tags {
+    width: 85vw; }
+    .price-tags .price-tag {
+      padding: 1rem;
+      text-align: center;
+      align-items: center;
+      width: 34rem; }
+      .price-tags .price-tag img {
+        width: 12rem;
+        margin-top: 1rem; }
+  footer .footer-wrap .logo img {
+    width: 85%; }
+  footer .footer-wrap .footer-menu ul .footer-get-started-btn {
+    padding: 15px 35px; } }
