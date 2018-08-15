@@ -4,6 +4,39 @@ html
 body
   font-family: 'Maven Pro', sans-serif
 
+.m-menu
+  margin: 0
+  padding: 0
+  position: fixed
+  height: 100vh
+  width: 100%
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  list-style: none
+  font-size: 3rem
+  line-height: 3
+  z-index: 990
+  background-image: linear-gradient(150deg, rgb(136, 211, 206) 0%, rgb(110, 69, 226) 100%)
+  transition: 0.2s
+  transform: translateX(100%)
+  right: 0
+  top: 0
+
+  .close-menu
+    position: fixed
+    font-size: 5rem
+    font-weight: 900
+    color: #fff
+    right: 5rem
+    top: 0
+    cursor: pointer
+
+.m-menu_activ
+  transform: translateX(0%)
+
+
 
 .main
   display: flex
@@ -44,6 +77,10 @@ body
 
   .m-menu-link
     display: none
+    color: #fff
+    font-size: 3rem
+    right: 0
+    top: 0
 
   .menu
     width: 40%
@@ -55,17 +92,24 @@ body
 
       .menu-link
         text-decoration: none
-        color: white
+        color: #fff
         font-size: 1.4rem
         font-weight: 500
 
-      .get-started-btn
-        border: 1px solid #ffffff
+        &:hover
+          border-bottom: 1px solid #fff
+          
+
+
+    .get-started-btn
+        border: 1px solid #fff
         padding: 18px 41px
         border-radius: 100px
         text-transform: uppercase
         font-size: 1rem
         font-weight: bold
+
+
 
 .main-text
   display: flex
@@ -450,9 +494,6 @@ footer
         letter-spacing: normal
         text-align: right
         color: rgba(106, 106, 119, 0.5)
-
-
-
 
 
 
