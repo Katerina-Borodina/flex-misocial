@@ -1,6 +1,8 @@
 var gulp = require('gulp'), // Подключаем Gulp
     sass = require('gulp-sass'), //Подключаем Sass пакет;
-    browserSync = require('browser-sync'); // Подключаем Browser Sync
+    browserSync = require('browser-sync'),
+    concat      = require('gulp-concat'), // Подключаем gulp-concat (для конкатенации файлов)
+    uglify      = require('gulp-uglifyjs'); // Подключаем gulp-uglifyj; // Подключаем Browser Sync
 
 gulp.task('sass', function(){ // Создаем таск "sass"
     return gulp.src('src/sass/**/*.sass') // Берем все sass файлы из папки sass и дочерних, если таковые будут
@@ -16,6 +18,16 @@ gulp.task('browser-sync', function() { // Создаем таск browser-sync
         },
         notify: false // Отключаем уведомления
     });
+});
+
+gulp.task('scripts', function() {
+    return gulp.src([ // Берем все необходимые библиотеки
+        'src/libs/jquery/dist/jquery.min.js', // Берем jQuery
+        'src/libs/magnific-popup/dist/jquery.magnific-popup.min.js' // Берем Magnific Popup
+    ])
+        .pipe(concat('libs.min.js')) // Собираем их в кучу в новом файле libs.min.js
+        .pipe(uglify()) // Сжимаем JS файл
+        .pipe(gulp.dest('src/js')); // Выгружаем в папку app/js
 });
 
 gulp.task('watch', ['browser-sync', 'sass'], function() {
